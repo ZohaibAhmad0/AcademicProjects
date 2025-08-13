@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Get in touch via this contact form. Share your favorite movie and feedback about the site.">
+  <meta name="keywords" content="Contact, Form, Feedback, Favorite Movie, Website Review">
+  <meta name="author" content="Your Name">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="signUp.css">
+  <link rel="stylesheet" href="contactUs.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <main class="container" id="main-content">
+    <details>
+            <summary>Movie Statistics</summary>
+            <table>
+                <caption>Detailed Movie Data</caption>
+                <thead>
+                    <tr>
+                        <th>Movie Title</th>
+                        <th>Genre</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sherlock Holmes</td>
+                        <td>Action/Mystery</td>
+                        <td>2009</td>
+                    </tr>
+                    <tr>
+                        <td>The Kite Runner</td>
+                        <td>Drama</td>
+                        <td>2007</td>
+                    </tr>
+                    <tr>
+                        <td>Movie 3</td>
+                        <td>Comedy</td>
+                        <td>2015</td>
+                    </tr>
+                </tbody>
+            </table>
+        </details>
+    <section class="form-left">
+      <h2>What is your favorite <span>movie</span></h2>
+      <form id="contactForm" action= "https://formspree.io/f/xyzwoebn" method="POST">
+        <label for="checkbox"><input type="checkbox" name="movie" value="Sherlock Holmes"> Sherlock Holmes</label>
+        <label for="checkbox"><input type="checkbox" name="movie" value="The Kite Runner"> The Kite Runner</label>
+        <label  for="checkbox"><input type="checkbox" name="movie" value="None of the above"> None of the above</label>
+
+        <h3>Did you like <span>my website</span></h3>
+        <label for="radiobutton"><input type="radio" name="feedback" value="Yes"> Yes</label>
+        <label for="radiobutton"><input type="radio" name="feedback" value="No"> No</label>
+        <label for="radiobutton"><input type="radio" name="feedback" value="Somehow"> Somehow</label>
+
+        <div class="btns">
+          <button type="reset" class="btn">Reset</button>
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="form-right" action="https://formspree.io/f/xyzwoebn" method="POST">
+      <form>
+        <h1 class="connect-heading">Let's connect!</h1>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message for me" rows="5" required maxlength="50"></textarea>
+  
+      </form>
+    </section>
+  </main>
+  <footer>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="trendingMovies.html">Trending Movies</a>
+            <a href="trailors.html">Watch Trailers</a>
+            <a href="feedback.html">Give Feedback</a>
+            <a href="contactUS.html">Contact Us</a>
+            <a href="https://www.imdb.com/" target="_blank" rel="noopener noreferrer">IMDB</a>
+            <a href="https://www.rottentomatoes.com/" target="_blank" rel="noopener noreferrer">Rotten Tomatoes</a>
+            <a href="https://www.metacritic.com/" target="_blank" rel="noopener noreferrer">Metacritic</a>
+        </nav>
+        <div class="legal">
+            <p>© 2025 Zohaib. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookies Settings</a>
+            <a href="#"><button id="increaseFont">Increase Font Size</button></a>
+        </div>
+    </footer>
+   <script src="script.js"></script>
+    <script>
+        document.getElementById('increaseFont').addEventListener('click', increaseFontSize);
+    </script>
+</body>
+
+</html>
