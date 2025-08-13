@@ -1,0 +1,217 @@
+LIBRARY MANAGEMENT SYSTEM - DETAILED CODE DOCUMENTATION
+===================================================
+
+Table of Contents:
+1. Project Overview
+2. Core Classes
+3. Authentication System
+4. Database Integration
+5. GUI Implementation
+6. System Workflow
+
+1. PROJECT OVERVIEW
+------------------
+The Library Management System is an object-oriented application implementing a complete
+library management solution. The system uses inheritance, polymorphism, and
+encapsulation to create a flexible and maintainable codebase.
+
+2. CORE CLASSES
+--------------
+
+2.1 Item Class (Item.py)
+------------------------
+Base abstract class for all library items.
+
+Key Components:
+- id: Unique identifier for each item
+- pageCount: Number of pages in the item
+- totalCopies: Number of copies available
+- timesBorrowed: Tracks how many times the item has been borrowed
+- isDamaged: Boolean flag for item condition
+- digitalCopy: Reference to digital version if available
+
+Methods Explained:
+- borrow(): 
+  * Decrements totalCopies
+  * Increments timesBorrowed
+  * Returns true if successful
+  * Handles copy availability logic
+
+- returnItem(damaged): 
+  * Increments totalCopies
+  * Updates damage status
+  * Manages borrowing state
+
+2.2 Specific Item Types
+----------------------
+a) Book Class:
+   - Extends Item
+   - Additional fields: title, author
+   - Standard borrowing behavior
+
+b) Thesis Class:
+   - Extends Item
+   - Additional fields: author, adviser, defenseYear
+   - Prevents digital copy creation
+   - Physical-only access
+
+c) OnlineResearchPaper Class:
+   - Extends Item
+   - Automatically creates digital copy
+   - Implements view and download tracking
+
+2.3 User System
+--------------
+a) User Class (abstract):
+   - Core attributes: id, name, email
+   - Manages borrowing limits
+   - Tracks borrowed items
+   - Implements loyalty system
+
+b) Member Class:
+   - Extends User
+   - Implements category system (STUDENT, FACULTY, ALUMNI)
+   - Manages member-specific privileges
+
+3. AUTHENTICATION SYSTEM
+-----------------------
+AuthManager Class:
+- Manages user authentication
+- Implements role-based access control
+- Handles password hashing for security
+- Maintains user sessions
+
+Key Methods:
+register_user():
+```python
+def register_user(self, username: str, password: str, role: UserRole):
+    # Checks for existing username
+    # Hashes password
+    # Creates new user record
+```
+
+login():
+```python
+def login(self, username: str, password: str):
+    # Verifies credentials
+    # Creates user session
+    # Returns authentication status
+```
+
+4. DATABASE INTEGRATION
+----------------------
+Database Class:
+- Uses SQLite for data persistence
+- Manages tables for items, members, transactions
+- Implements CRUD operations
+
+Key Tables:
+1. items:
+   - id (PRIMARY KEY)
+   - type
+   - title
+   - author
+   - page_count
+   - total_copies
+   - is_damaged
+   - damage_severity
+
+2. members:
+   - id (PRIMARY KEY)
+   - name
+   - email
+   - category
+   - allowed_items
+
+3. transactions:
+   - id (AUTO INCREMENT)
+   - member_id (FOREIGN KEY)
+   - item_id (FOREIGN KEY)
+   - transaction_type
+   - date
+
+5. GUI IMPLEMENTATION
+--------------------
+The GUI is implemented using tkinter with a tab-based interface:
+
+1. LoginWindow:
+   - Handles user authentication
+   - Provides registration interface
+   - Centers on screen
+   - Implements secure login flow
+
+2. MainWindow:
+   - Implements tab-based navigation
+   - Role-specific feature access
+   - Real-time updates
+
+Tabs:
+a) Borrow/Return:
+   - Member ID input
+   - Item ID input
+   - Damage reporting
+   - Transaction processing
+
+b) Search:
+   - Title/Author search
+   - Results display
+   - Item availability
+
+c) Management (Admin only):
+   - Repair management
+   - Statistics viewing
+   - System maintenance
+
+d) Online Papers:
+   - Digital content access
+   - Download tracking
+   - Usage statistics
+
+6. SYSTEM WORKFLOW
+-----------------
+1. User Authentication:
+   - Login/Register
+   - Role verification
+   - Session management
+
+2. Item Management:
+   - Borrowing process
+   - Return handling
+   - Damage assessment
+   - Digital access
+
+3. Member Management:
+   - Category-based privileges
+   - Borrowing history
+   - Loyalty system
+
+4. System Maintenance:
+   - Periodic repair checks
+   - Archive management
+   - Statistics tracking
+
+ERROR HANDLING
+-------------
+The system implements comprehensive error handling:
+
+1. Database Errors:
+   - Connection issues
+   - Query failures
+   - Data integrity
+
+2. User Input:
+   - Validation checks
+   - Format verification
+   - Access control
+
+3. Business Logic:
+   - Borrowing limits
+   - Item availability
+   - User permissions
+
+Each error is caught, logged, and presented to the user through
+appropriate GUI messages while maintaining system stability.
+
+This documentation provides a comprehensive overview of the system's
+implementation. For specific implementation details, refer to the
+inline comments in each source file.

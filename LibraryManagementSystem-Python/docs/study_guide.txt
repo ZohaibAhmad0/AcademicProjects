@@ -1,0 +1,139 @@
+LIBRARY MANAGEMENT SYSTEM - STUDY GUIDE
+=====================================
+
+1. CORE CONCEPTS
+---------------
+a) Object-Oriented Programming (OOP)
+   - Study Material:
+     * "Clean Code" by Robert C. Martin (Chapters 1-6)
+     * "Head First Design Patterns" (Inheritance and Polymorphism sections)
+     * Python OOP Tutorial: https://realpython.com/python3-object-oriented-programming/
+
+b) Design Patterns
+   - Key Focus:
+     * Singleton Pattern (Auth Manager)
+     * Factory Pattern (Item creation)
+     * Observer Pattern (GUI updates)
+   - Resources:
+     * "Design Patterns: Elements of Reusable Object-Oriented Software" by Gang of Four
+     * https://refactoring.guru/design-patterns
+
+2. PYTHON-SPECIFIC CONCEPTS
+--------------------------
+a) Modern Python Features
+   - Type Hints
+   - Dataclasses
+   - Abstract Base Classes
+   - Resource: https://docs.python.org/3/library/typing.html
+
+b) Python GUI Development
+   - Tkinter Documentation: https://docs.python.org/3/library/tkinter.html
+   - Modern Tkinter for Busy Python Developers book
+
+3. DATABASE CONCEPTS
+-------------------
+a) SQLite
+   - Official Documentation: https://www.sqlite.org/docs.html
+   - Python SQLite3 Module: https://docs.python.org/3/library/sqlite3.html
+
+b) Database Design
+   - "Database Design for Mere Mortals"
+   - Normalization concepts
+   - ACID properties
+
+4. SECURITY CONCEPTS
+-------------------
+a) Authentication & Authorization
+   - OAuth 2.0 concepts
+   - Password hashing (hashlib)
+   - Session management
+   - Resource: https://owasp.org/www-project-top-ten/
+
+b) Role-Based Access Control (RBAC)
+   - NIST RBAC model
+   - Implementation strategies
+
+5. SOFTWARE ARCHITECTURE
+----------------------
+a) Layer Pattern
+   - Presentation Layer (GUI)
+   - Business Logic Layer
+   - Data Access Layer
+   - Resource: "Clean Architecture" by Robert C. Martin
+
+b) SOLID Principles
+   - Single Responsibility
+   - Open-Closed
+   - Liskov Substitution
+   - Interface Segregation
+   - Dependency Inversion
+
+6. KEY IMPLEMENTATION FEATURES
+----------------------------
+a) Digital Resource Management
+   - File handling
+   - Digital rights management
+   - Resource: Python File I/O documentation
+
+b) Error Handling
+   - Exception hierarchy
+   - Custom exceptions
+   - Python exception handling best practices
+
+7. TESTING METHODOLOGIES
+-----------------------
+- Unit Testing (unittest framework)
+- Integration Testing
+- Resource: https://docs.python.org/3/library/unittest.html
+
+8. VERSION CONTROL
+----------------
+- Git basics
+- Branching strategies
+- Resource: https://git-scm.com/book/en/v2
+
+9. DEFENSIVE TOPICS
+-----------------
+Key points to defend:
+1. Why Python for this implementation?
+   - Cross-platform compatibility
+   - Rich standard library
+   - Clear, readable syntax
+   - Strong OOP support
+
+2. Architecture Decisions
+   - Why SQLite over other databases?
+   - Why Tkinter over other GUI frameworks?
+   - Role-based access implementation
+
+3. Security Measures
+   - Password hashing implementation
+   - Session management approach
+   - Access control mechanisms
+
+4. Scalability Considerations
+   - Database indexing
+   - Connection pooling
+   - Resource management
+
+5. Error Handling Strategy
+   - Custom exception hierarchy
+   - User feedback mechanisms
+   - System recovery procedures
+
+RECOMMENDED READING ORDER
+-----------------------
+1. OOP Concepts (Clean Code)
+2. Python-specific features
+3. Design Patterns
+4. Database concepts
+5. Security implementation
+6. Architecture principles
+7. Testing methodologies
+
+For project defense, focus on:
+1. System architecture justification
+2. Security implementation details
+3. Error handling approach
+4. Scalability considerations
+5. Future improvement possibilities
