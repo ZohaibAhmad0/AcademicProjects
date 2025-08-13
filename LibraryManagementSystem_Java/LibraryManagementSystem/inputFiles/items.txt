@@ -1,0 +1,16 @@
+ID Title Author Page_Count Topic Type Copies
+1 Clean_Code Robert_C_Martin 464 Software_Engineering Book 3
+2 The_Pragmatic_Programmer Andrew_Hunt 352 Software_Engineering Book 2
+3 Design_Patterns Erich_Gamma 395 Software_Engineering Book 2
+4 Refactoring Martin_Fowler 448 Software_Engineering Book 3
+5 Patterns_of_Enterprise_Application_Architecture Martin_Fowler 560 Architecture Book 1
+6 Domain_Driven_Design Eric_Evans 488 Design Book 2
+7 Modern_Operating_Systems Andrew_Tanenbaum 1136 OS Book 2
+8 Deep_Learning Ian_Goodfellow 800 AI Book 1
+9 Compiler_Design Alfred_Aho 789 Compilers Book 1
+10 AI_Modern_Approach Stuart_Russell 1132 AI Book 1
+11 Smart_City_Initiatives Jane_Smith 200 Urban_Development Thesis 2
+12 Edge_Computing_Models Mark_Taylor 150 Networks ResearchPaper 2
+13 Secure_Cryptography Tom_Watson 220 Security ResearchPaper 1
+14 Cyber_Physical_Systems Kate_Hudson 310 Embedded ResearchPaper 2
+15 Reinforcement_Learning_Cases John_Connor 180 AI Thesis 1
