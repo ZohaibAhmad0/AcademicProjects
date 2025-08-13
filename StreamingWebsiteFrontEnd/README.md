@@ -1,0 +1,1 @@
+This Dynamically built front-end of the website has been built using pure html, csss and a bit of javascript as per the requirement of the course. This project invloves the usage of grid, flex and other adnvaced properties of css, including the media queries to make it more dynamic website. 
